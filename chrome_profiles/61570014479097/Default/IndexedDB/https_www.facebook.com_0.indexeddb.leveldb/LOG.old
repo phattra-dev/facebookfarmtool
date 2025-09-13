@@ -1,0 +1,19 @@
+2025/08/23-20:03:13.421 63cc Reusing MANIFEST C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570014479097\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/08/23-20:03:13.422 63cc Recovering log #15
+2025/08/23-20:03:13.468 63cc Reusing old log C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570014479097\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/000015.log 
+2025/08/23-20:30:28.219 8b80 Level-0 table #20: started
+2025/08/23-20:30:28.258 8b80 Level-0 table #20: 1832834 bytes OK
+2025/08/23-20:30:28.261 8b80 Delete type=0 #15
+2025/08/23-20:30:29.772 63cc Compacting 1@1 + 1@2 files
+2025/08/23-20:30:29.801 63cc Generated table #21@1: 2833 keys, 127067 bytes
+2025/08/23-20:30:29.801 63cc Compacted 1@1 + 1@2 files => 127067 bytes
+2025/08/23-20:30:29.801 63cc compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/08/23-20:30:29.802 63cc Delete type=2 #17
+2025/08/23-20:30:29.802 63cc Delete type=2 #20
+2025/08/23-20:41:35.348 63cc Level-0 table #23: started
+2025/08/23-20:41:35.378 63cc Level-0 table #23: 1834942 bytes OK
+2025/08/23-20:41:35.380 63cc Delete type=0 #19
+2025/08/23-20:41:36.652 8b80 Compacting 1@1 + 1@2 files
+2025/08/23-20:41:36.681 8b80 Generated table #24@1: 2847 keys, 124395 bytes
+2025/08/23-20:41:36.681 8b80 Compacted 1@1 + 1@2 files => 124395 bytes
+2025/08/23-20:41:36.681 8b80 compacted to: files[ 0 0 1 0 0 0 0 ]

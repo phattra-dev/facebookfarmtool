@@ -1,0 +1,19 @@
+{
+  "delay_min": 5,
+  "delay_max": 15,
+  "use_proxy": false,
+  "headless": false,
+  "save_profiles": true,
+  "session_persistence": true,
+  "auto_relogin_on_failure": true,
+  "reuse_sessions": true,
+  "session_storage": "profile",
+  "session_path": "chrome_profiles",
+  "grid_layout": true,
+  "grid_spacing": 10,
+  "default_window_size": [
+    600,
+    1000
+  ],
+  "max_concurrent_browsers": 3
+}

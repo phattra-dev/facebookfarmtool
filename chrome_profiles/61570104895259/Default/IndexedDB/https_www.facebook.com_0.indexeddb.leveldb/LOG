@@ -1,0 +1,7 @@
+2025/08/28-08:24:19.385 63d4 Reusing MANIFEST C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570104895259\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/08/28-08:24:19.386 63d4 Recovering log #44
+2025/08/28-08:24:19.386 63d4 Reusing old log C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570104895259\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/000044.log 
+2025/08/28-08:24:20.700 2224 Compacting 1@1 + 1@2 files
+2025/08/28-08:24:20.720 2224 Generated table #47@1: 3348 keys, 162333 bytes
+2025/08/28-08:24:20.720 2224 Compacted 1@1 + 1@2 files => 162333 bytes
+2025/08/28-08:24:20.721 2224 compacted to: files[ 0 0 1 0 0 0 0 ]

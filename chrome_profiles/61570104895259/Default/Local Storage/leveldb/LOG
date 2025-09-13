@@ -1,0 +1,6 @@
+2025/08/28-08:24:12.605 502c Reusing MANIFEST C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570104895259\Default\Local Storage\leveldb/MANIFEST-000001
+2025/08/28-08:24:12.611 502c Recovering log #145
+2025/08/28-08:24:12.613 502c Reusing old log C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570104895259\Default\Local Storage\leveldb/000145.log 
+2025/08/28-08:48:18.799 6cfc Level-0 table #150: started
+2025/08/28-08:48:18.803 6cfc Level-0 table #150: 10241 bytes OK
+2025/08/28-08:48:18.805 6cfc Delete type=0 #145

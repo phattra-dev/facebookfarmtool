@@ -1,0 +1,6 @@
+2025/08/23-23:38:10.703 5b84 Reusing MANIFEST C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570104895259\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/08/23-23:38:10.704 5b84 Recovering log #40
+2025/08/23-23:38:10.811 5b84 Reusing old log C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570104895259\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/000040.log 
+2025/08/24-00:04:07.495 4760 Level-0 table #45: started
+2025/08/24-00:04:07.542 4760 Level-0 table #45: 1862483 bytes OK
+2025/08/24-00:04:07.544 4760 Delete type=0 #40

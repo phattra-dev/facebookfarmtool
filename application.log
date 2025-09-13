@@ -1,0 +1,5 @@
+2025-09-11 20:57:26,372 - db_manager - INFO - Database table 'accounts' ensured/created successfully.
+2025-09-11 20:57:58,093 - db_manager - INFO - Account status updated: UID=61573814975955, Status=Error, LoginIncrement=False, TaskIncrement=False
+2025-09-11 20:58:26,851 - db_manager - INFO - Account status updated: UID=61573814975955, Status=Error, LoginIncrement=False, TaskIncrement=False
+2025-09-11 21:09:07,508 - db_manager - INFO - Database table 'accounts' ensured/created successfully.
+2025-09-11 21:09:16,995 - db_manager - INFO - Account status updated: UID=61573656643433, Status=Error, LoginIncrement=False, TaskIncrement=False

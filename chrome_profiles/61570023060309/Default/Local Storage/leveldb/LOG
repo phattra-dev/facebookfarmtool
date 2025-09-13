@@ -1,0 +1,15 @@
+2025/08/28-01:29:28.886 98bc Reusing MANIFEST C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570023060309\Default\Local Storage\leveldb/MANIFEST-000001
+2025/08/28-01:29:28.894 98bc Recovering log #128
+2025/08/28-01:29:28.897 98bc Reusing old log C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570023060309\Default\Local Storage\leveldb/000128.log 
+2025/08/28-01:45:35.139 1414 Level-0 table #132: started
+2025/08/28-01:45:35.147 1414 Level-0 table #132: 21583 bytes OK
+2025/08/28-01:45:35.149 1414 Delete type=0 #128
+2025/08/28-01:45:35.149 1414 Compacting 4@0 + 1@1 files
+2025/08/28-01:45:35.164 1414 Generated table #133@0: 8199 keys, 141143 bytes
+2025/08/28-01:45:35.164 1414 Compacted 4@0 + 1@1 files => 141143 bytes
+2025/08/28-01:45:35.165 1414 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/08/28-01:45:35.166 1414 Delete type=2 #121
+2025/08/28-01:45:35.166 1414 Delete type=2 #124
+2025/08/28-01:45:35.166 1414 Delete type=2 #127
+2025/08/28-01:45:35.166 1414 Delete type=2 #129
+2025/08/28-01:45:35.166 1414 Delete type=2 #132

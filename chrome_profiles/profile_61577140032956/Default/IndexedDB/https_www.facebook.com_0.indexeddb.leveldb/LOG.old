@@ -1,0 +1,6 @@
+2025/09/08-23:53:14.144 308c Creating DB C:\Users\KLS COMPUTER\Downloads\testpython\chrome_profiles\profile_61577140032956\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb since it was missing.
+2025/09/08-23:53:14.148 308c Reusing MANIFEST C:\Users\KLS COMPUTER\Downloads\testpython\chrome_profiles\profile_61577140032956\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/09/08-23:53:15.113 80d4 Level-0 table #5: started
+2025/09/08-23:53:15.115 80d4 Level-0 table #5: 15047 bytes OK
+2025/09/08-23:53:15.116 80d4 Delete type=0 #3
+2025/09/08-23:53:15.117 308c Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)

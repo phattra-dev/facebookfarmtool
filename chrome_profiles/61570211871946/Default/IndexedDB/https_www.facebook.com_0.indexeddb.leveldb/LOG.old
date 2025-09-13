@@ -1,0 +1,15 @@
+2025/08/28-05:00:46.938 81b8 Reusing MANIFEST C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570211871946\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/08/28-05:00:46.939 81b8 Recovering log #15
+2025/08/28-05:00:46.944 81b8 Reusing old log C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570211871946\Default\IndexedDB\https_www.facebook.com_0.indexeddb.leveldb/000015.log 
+2025/08/28-05:20:37.827 2fcc Level-0 table #20: started
+2025/08/28-05:20:37.834 2fcc Level-0 table #20: 412956 bytes OK
+2025/08/28-05:20:37.835 2fcc Delete type=0 #15
+2025/08/28-05:20:37.836 2fcc Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2025/08/28-05:20:37.836 2fcc Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x0d\x01\x1f\x04\x01\x06@\xff\x9a\x1e\xac\xe2B\xe0B\x93c\xf7\x87\x9b\xc1\x9c\x01\xf5\xcf\xbd\xa0+\xc1\xc8l]\xaa\xa3Y\x08\x7f\xe3\xbf\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00*@' @ 158868 : 1
+2025/08/28-05:20:37.836 2fcc Compacting 1@1 + 1@2 files
+2025/08/28-05:20:37.845 2fcc Generated table #21@1: 2962 keys, 134646 bytes
+2025/08/28-05:20:37.845 2fcc Compacted 1@1 + 1@2 files => 134646 bytes
+2025/08/28-05:20:37.846 2fcc compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/08/28-05:20:37.846 2fcc Delete type=2 #17
+2025/08/28-05:20:37.846 2fcc Delete type=2 #20
+2025/08/28-05:20:37.847 2fcc Manual compaction at level-1 from '\x00\x0d\x01\x1f\x04\x01\x06@\xff\x9a\x1e\xac\xe2B\xe0B\x93c\xf7\x87\x9b\xc1\x9c\x01\xf5\xcf\xbd\xa0+\xc1\xc8l]\xaa\xa3Y\x08\x7f\xe3\xbf\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x03\x00\x00\x00\x00\x00\x00*@' @ 158868 : 1 .. (end); will stop at (end)

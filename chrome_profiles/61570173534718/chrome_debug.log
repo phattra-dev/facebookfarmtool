@@ -1,0 +1,189 @@
+[10176:13344:0828/065930.923:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[10176:16756:0828/065930.964:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for Subresource Filter Rules (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\Subresource Filter\Unindexed Rules\9.58.0).: Access is denied. (0x5)
+[10176:3488:0828/065930.964:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for Optimization Hints (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\OptimizationHints\532).: Access is denied. (0x5)
+[10176:32236:0828/065930.964:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for Trust Token Key Commitments (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\TrustTokenKeyCommitments\2025.8.22.1).: Access is denied. (0x5)
+[10176:5464:0828/065930.965:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for CRLSet (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\CertificateRevocation\9986).: Access is denied. (0x5)
+[10176:5464:0828/065930.965:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for CRLSet (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\CertificateRevocation\9987).: Access is denied. (0x5)
+[10176:29804:0828/065930.965:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for Third Party Module List (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\ThirdPartyModuleList32\2018.7.19.1).: Access is denied. (0x5)
+[10176:23784:0828/065930.965:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for PKI Metadata (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\PKIMetadata\1406).: Access is denied. (0x5)
+[10176:28852:0828/065930.966:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for Crowd Deny (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\Crowd Deny\2025.8.21.781).: Access is denied. (0x5)
+[10176:29824:0828/065930.965:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for Safety Tips (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\SafetyTips\3079).: Access is denied. (0x5)
+[10176:13344:0828/065930.966:WARNING:chrome\browser\chrome_browser_main_win.cc:743] Command line too long for RegisterApplicationRestart:  --allow-pre-commit-input --disable-background-networking --disable-backgrounding-occluded-windows --disable-blink-features=AutomationControlled --disable-client-side-phishing-detection --disable-default-apps --disable-first-run-ui --disable-hang-monitor --disable-infobars --disable-intensive-wake-up-throttling --disable-notifications --disable-popup-blocking --disable-prompt-on-repost --disable-sync --disable-tab-groups-collapse-freezing --enable-logging --force-device-scale-factor=0.22140221402214 --high-dpi-support=0.22140221402214 --ignore-certificate-errors --load-extension="C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\ChromeExtensions\proxychanger22\proxychanger_empty" --log-level=0 --mute-audio --no-default-browser-check --no-first-run --no-sandbox --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.4852.87 Safari/537.36" --user-data-dir="C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718" --window-position=1089,715 --window-size=1084,700 --restore-last-session --restart
+[10176:37548:0828/065930.966:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for Probabilistic Reveal Tokens (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\ProbabilisticRevealTokenRegistry\2025.8.19.0).: Access is denied. (0x5)
+[10176:3488:0828/065930.969:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for Third-Party Cookie Deprecation Metadata (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\TpcdMetadata\2025.8.21.1).: Access is denied. (0x5)
+[33876:18936:0828/065931.063:WARNING:ui\gl\direct_composition_support.cc:1195] QueryInterface to IDCompositionDevice4 failed: No such interface supported (0x80004002)
+[10176:13344:0828/065931.606:INFO:CONSOLE:0] "Uncaught (in promise) Error: Cannot access contents of url "chrome-untrusted://new-tab-page/one-google-bar?paramsencoded=". Extension manifest must request permission to access this host.", source: chrome-extension://cfflendbdpccmkpfdbpdjnbadjmgajae/background.js (0)
+[10176:24372:0828/065933.115:INFO:components\component_updater\component_installer.cc:333] Failed to read manifest for Related Website Sets (C:\Users\KLS COMPUTER\Documents\FPlus\ChromeProfiles\61570173534718\FirstPartySetsPreloaded\2025.7.24.0).: Access is denied. (0x5)
+[10176:13344:0828/065941.453:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:5154
+[10176:13344:0828/065941.775:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:265059
+[10176:13344:0828/065941.929:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:883094
+[10176:13344:0828/065942.219:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:45147
+[10176:13344:0828/065942.283:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:2200227
+[10176:13344:0828/065942.685:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/065942.685:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/065942.685:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/065942.685:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/065942.722:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:2992963
+[10176:13344:0828/065942.958:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:2747168
+[10176:13344:0828/065942.982:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:4680
+[10176:13344:0828/065943.299:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:118577
+[10176:13344:0828/070003.208:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070003.208:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070003.208:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070003.208:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070026.281:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070026.281:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070026.281:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070026.281:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070044.946:INFO:CONSOLE:9] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4ik9_4/yQ/l/en_US-j/41SMNgVGowX.js (9)
+[31592:37328:0828/070100.010:ERROR:mojo\public\cpp\bindings\lib\validation_errors.cc:106] Invalid message: VALIDATION_ERROR_UNEXPECTED_NULL_POINTER (null field 1)
+[31592:37328:0828/070100.011:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 912613293 rejected by interface patch.mojom.FilePatcher
+[33876:18936:0828/070106.942:ERROR:gpu\command_buffer\service\shared_image\shared_image_manager.cc:401] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[15736:12796:0828/070108.603:ERROR:mojo\public\cpp\bindings\lib\validation_errors.cc:106] Invalid message: VALIDATION_ERROR_UNEXPECTED_NULL_POINTER (null field 1)
+[15736:12796:0828/070108.604:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 912613293 rejected by interface patch.mojom.FilePatcher
+[33280:30964:0828/070125.137:ERROR:mojo\public\cpp\bindings\lib\validation_errors.cc:106] Invalid message: VALIDATION_ERROR_UNEXPECTED_NULL_POINTER (null field 1)
+[33280:30964:0828/070125.137:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 912613293 rejected by interface patch.mojom.FilePatcher
+[14792:6500:0828/070149.859:ERROR:mojo\public\cpp\bindings\lib\validation_errors.cc:106] Invalid message: VALIDATION_ERROR_UNEXPECTED_NULL_POINTER (null field 1)
+[14792:6500:0828/070149.859:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 912613293 rejected by interface patch.mojom.FilePatcher
+[20408:7404:0828/070158.220:ERROR:mojo\public\cpp\bindings\lib\validation_errors.cc:106] Invalid message: VALIDATION_ERROR_UNEXPECTED_NULL_POINTER (null field 1)
+[20408:7404:0828/070158.220:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 912613293 rejected by interface patch.mojom.FilePatcher
+[33240:38980:0828/070223.289:ERROR:mojo\public\cpp\bindings\lib\validation_errors.cc:106] Invalid message: VALIDATION_ERROR_UNEXPECTED_NULL_POINTER (null field 1)
+[33240:38980:0828/070223.289:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 912613293 rejected by interface patch.mojom.FilePatcher
+[10176:13344:0828/070239.374:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070239.374:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070239.374:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070239.374:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[18516:14208:0828/070248.002:ERROR:mojo\public\cpp\bindings\lib\validation_errors.cc:106] Invalid message: VALIDATION_ERROR_UNEXPECTED_NULL_POINTER (null field 1)
+[18516:14208:0828/070248.002:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 912613293 rejected by interface patch.mojom.FilePatcher
+[2456:13024:0828/070321.000:ERROR:mojo\public\cpp\bindings\lib\validation_errors.cc:106] Invalid message: VALIDATION_ERROR_UNEXPECTED_NULL_POINTER (null field 1)
+[2456:13024:0828/070321.001:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 912613293 rejected by interface patch.mojom.FilePatcher
+[20788:37484:0828/070330.519:ERROR:mojo\public\cpp\bindings\lib\validation_errors.cc:106] Invalid message: VALIDATION_ERROR_UNEXPECTED_NULL_POINTER (null field 1)
+[20788:37484:0828/070330.520:ERROR:mojo\public\cpp\bindings\lib\interface_endpoint_client.cc:725] Message 912613293 rejected by interface patch.mojom.FilePatcher
+[10176:13344:0828/070458.045:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070458.045:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070458.045:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070458.045:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070610.259:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070610.259:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070610.259:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070610.259:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070620.973:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070620.974:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070620.974:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070620.974:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070626.581:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070626.581:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070626.581:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070626.581:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070908.188:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070908.188:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070908.188:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070908.188:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070926.850:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070926.850:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070926.850:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/070926.850:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071251.626:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071251.626:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071251.626:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071251.626:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071352.214:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071352.214:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071352.214:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071352.214:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071500.647:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071500.647:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071500.647:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071500.647:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071613.422:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071613.422:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071613.422:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071613.422:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071726.776:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071726.776:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071726.776:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071726.776:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071839.568:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071839.568:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071839.568:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071839.568:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071952.249:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071952.249:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071952.249:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/071952.249:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/072003.003:INFO:CONSOLE:320] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/072003.003:INFO:CONSOLE:320] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable a Facebook feature or "hack" someone's account, it is a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/072003.003:INFO:CONSOLE:320] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)
+[10176:13344:0828/072003.003:INFO:CONSOLE:320] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yX/r/lNfO4Ylz6OW.js (320)

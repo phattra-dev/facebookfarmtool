@@ -1,0 +1,94 @@
+[
+  {
+    "domain": ".facebook.com",
+    "httpOnly": false,
+    "name": "presence",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "C%7B%22t3%22%3A%5B%5D%2C%22utc3%22%3A1757360603448%2C%22v%22%3A1%7D"
+  },
+  {
+    "domain": ".facebook.com",
+    "expiry": 1765136598,
+    "httpOnly": true,
+    "name": "fr",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "1htDKDJlciqmOPjjI.AWfdok867cNKsOfdIgTBhOyxCnADjeNULTztP5vpXYnoMDlvrCk.Bovxag..AAA.0.0.BovzHK.AWcowJkRl_GYK75y4rQFXxfQTSg"
+  },
+  {
+    "domain": ".facebook.com",
+    "httpOnly": false,
+    "name": "ps_n",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "1"
+  },
+  {
+    "domain": ".facebook.com",
+    "httpOnly": false,
+    "name": "sb",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "PAXZZ2Nl8Ij-zIieVgWs7Bql"
+  },
+  {
+    "domain": ".facebook.com",
+    "httpOnly": false,
+    "name": "datr",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "PAXZZ2vdNzIXaTeWm5aHuX35"
+  },
+  {
+    "domain": ".facebook.com",
+    "httpOnly": false,
+    "name": "dpr",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "0.22140221297740936"
+  },
+  {
+    "domain": ".facebook.com",
+    "httpOnly": false,
+    "name": "xs",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "1%3AbZqmlHMPCHnU2w%3A2%3A1742275919%3A-1%3A-1%3A%3AAcUHm46lE5GADwgCJpAunQ4H3Y_dk6m2itg93zdXwmU"
+  },
+  {
+    "domain": ".facebook.com",
+    "httpOnly": false,
+    "name": "ps_l",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "1"
+  },
+  {
+    "domain": ".facebook.com",
+    "httpOnly": false,
+    "name": "c_user",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "61573838621543"
+  },
+  {
+    "domain": ".facebook.com",
+    "expiry": 1757965403,
+    "httpOnly": false,
+    "name": "wd",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "1904x985"
+  }
+]
