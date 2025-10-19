@@ -1839,11 +1839,23 @@ class ParallelLoginManager(QObject):
         return None
     def start(self):
         """Start processing all accounts in parallel"""
+        print(f"🚀 DEBUG: ParallelLoginManager.start() called with {len(self.accounts)} accounts")
+        self.log_message.emit(f"🚀 DEBUG: ParallelLoginManager.start() BEGIN")
+        self.log_message.emit(f"   - Total accounts: {len(self.accounts)}")
+        self.log_message.emit(f"   - post_url: {self.post_url}")
+        self.log_message.emit(f"   - actions: {self.actions}")
+        
         self.completed_count = 0
         self.running = True
+        
+        self.log_message.emit(f"🔧 DEBUG: About to enter worker creation loop...")
         # Create and start workers
         for i, account in enumerate(self.accounts):
+            print(f"🔧 DEBUG: Loop iteration {i+1}/{len(self.accounts)}")
+            self.log_message.emit(f"🔧 DEBUG: Processing account {i+1}/{len(self.accounts)}")
+            
             if not self.running:
+                self.log_message.emit(f"⚠️ DEBUG: self.running is False, breaking loop")
                 break
             # Get proxy for this account
             proxy = self.get_proxy(i)
@@ -1861,24 +1873,40 @@ class ParallelLoginManager(QObject):
             self.log_message.emit(f"   - comment_text: {'Yes' if self.comment_text else 'No'}")
             self.log_message.emit(f"   - random_comments: {'Yes' if self.random_comments else 'No'}")
             
-            # Create worker
-            worker = AccountWorker(
-                account, i, self.use_proxies, self.post_url, self.comment_text, 
-                self.actions, self.random_comments, self.react_type, 
-                self.db_manager, self.target_group_url, self.schedule_actions, 
-                self.config_manager, proxy, window_position
-            )
-            # Connect signals
-            worker.signals.finished.connect(self.on_worker_finished)
-            worker.signals.log.connect(self.log_message.emit)
-            worker.signals.interaction.connect(self.interaction_update.emit)
-            worker.signals.account_status.connect(self.account_status_update.emit)
-            worker.signals.task_completed.connect(self.task_completed.emit)
-            worker.signals.progress.connect(self.on_worker_progress)
-            # Start worker
-            self.thread_pool.start(worker)
+            try:
+                # Create worker
+                self.log_message.emit(f"🔧 DEBUG: About to call AccountWorker() constructor...")
+                worker = AccountWorker(
+                    account, i, self.use_proxies, self.post_url, self.comment_text, 
+                    self.actions, self.random_comments, self.react_type, 
+                    self.db_manager, self.target_group_url, self.schedule_actions, 
+                    self.config_manager, proxy, window_position
+                )
+                self.log_message.emit(f"✅ DEBUG: Worker {i+1} created successfully")
+                
+                # Connect signals
+                self.log_message.emit(f"🔧 DEBUG: Connecting signals for worker {i+1}...")
+                worker.signals.finished.connect(self.on_worker_finished)
+                worker.signals.log.connect(self.log_message.emit)
+                worker.signals.interaction.connect(self.interaction_update.emit)
+                worker.signals.account_status.connect(self.account_status_update.emit)
+                worker.signals.task_completed.connect(self.task_completed.emit)
+                worker.signals.progress.connect(self.on_worker_progress)
+                self.log_message.emit(f"✅ DEBUG: Signals connected for worker {i+1}")
+                
+                # Start worker
+                self.log_message.emit(f"🔧 DEBUG: Starting worker {i+1} in thread pool...")
+                self.thread_pool.start(worker)
+                self.log_message.emit(f"✅ DEBUG: Worker {i+1} started in thread pool")
+            except Exception as e:
+                self.log_message.emit(f"❌ ERROR creating/starting worker {i+1}: {e}")
+                import traceback
+                self.log_message.emit(f"❌ Traceback: {traceback.format_exc()}")
+        
+        self.log_message.emit(f"🔧 DEBUG: Worker creation loop completed")
         # Monitor thread pool
         self.monitor_thread_pool()
+        self.log_message.emit(f"🚀 DEBUG: ParallelLoginManager.start() COMPLETE")
     def on_worker_finished(self, row_index, status):
         """Handle worker finished signal"""
         self.worker_finished.emit(row_index, status)
