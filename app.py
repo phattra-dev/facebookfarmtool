@@ -4701,14 +4701,27 @@ class MainWindow(QMainWindow):
         
         random_comments = None
         if self.random_comments_checkbox.isChecked():
-            random_comments_text = self.random_comments_input.toPlainText().strip()
-            if random_comments_text:
-                random_comments = [line.strip() for line in random_comments_text.splitlines() if line.strip()]
-                self.log_message(f"✅ Random comments: {len(random_comments)} comments loaded")
-                if len(random_comments) < len(selected_accounts):
-                    self.log_message("⚠️ Warning: Fewer random comments than accounts. Some accounts will reuse comments.")
+            # Use the checkbox-based system if available
+            if hasattr(self, 'random_comments_checkboxes') and self.random_comments_checkboxes:
+                random_comments = self.get_enabled_random_comments()
+                if random_comments:
+                    self.log_message(f"✅ Random comments (checkboxes): {len(random_comments)} comments loaded")
+                    if len(random_comments) < len(selected_accounts):
+                        self.log_message("⚠️ Warning: Fewer random comments than accounts. Some accounts will reuse comments.")
+                else:
+                    self.log_message("⚠️ Random comments checkbox is checked but no comments are enabled")
+            # Fallback to text input if checkbox system not available
+            elif hasattr(self, 'random_comments_input'):
+                random_comments_text = self.random_comments_input.toPlainText().strip()
+                if random_comments_text:
+                    random_comments = [line.strip() for line in random_comments_text.splitlines() if line.strip()]
+                    self.log_message(f"✅ Random comments (text): {len(random_comments)} comments loaded")
+                    if len(random_comments) < len(selected_accounts):
+                        self.log_message("⚠️ Warning: Fewer random comments than accounts. Some accounts will reuse comments.")
+                else:
+                    self.log_message("⚠️ Random comments checkbox is checked but no text provided")
             else:
-                self.log_message("⚠️ Random comments checkbox is checked but no comments provided")
+                self.log_message("❌ ERROR: Random comments system not found!")
         
         selected_reactions = self.get_selected_reactions()
         react_type = selected_reactions[0] if selected_reactions else 'like'
