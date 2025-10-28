@@ -215,6 +215,23 @@ class AccountWorker(QRunnable):
     """Worker thread for handling individual account login and actions."""
     def __init__(self, account_data, row_index, use_proxies, post_url, comment_text, actions, random_comments, react_type, db_manager, target_group_url, schedule_actions, config_manager, proxy=None, window_position=None):
         super().__init__()
+        
+        # Get UID for logging
+        if isinstance(account_data, dict):
+            uid_for_debug = account_data.get('uid', 'Unknown')
+        elif isinstance(account_data, (list, tuple)) and len(account_data) > 0:
+            uid_for_debug = account_data[0]
+        else:
+            uid_for_debug = 'Unknown'
+        
+        print(f"🔧 DEBUG: AccountWorker.__init__ for UID: {uid_for_debug}")
+        print(f"🔧 DEBUG: Received parameters:")
+        print(f"   - post_url: {post_url}")
+        print(f"   - actions: {actions}")
+        print(f"   - react_type: {react_type}")
+        print(f"   - comment_text: {'Yes' if comment_text else 'No'}")
+        print(f"   - random_comments: {'Yes' if random_comments else 'No'}")
+        
         self.account_data = account_data
         self.row_index = row_index
         self.use_proxies = use_proxies
@@ -223,6 +240,12 @@ class AccountWorker(QRunnable):
         self.actions = actions if actions else []
         self.random_comments = random_comments if random_comments else []
         self.react_type = react_type
+        
+        print(f"🔧 DEBUG: After assignment:")
+        print(f"   - self.post_url: {self.post_url}")
+        print(f"   - self.actions: {self.actions}")
+        print(f"   - self.react_type: {self.react_type}")
+        
         # --- MODIFIED: Use db_manager instead of account_manager ---
         self.db_manager = db_manager
         # --- END MODIFIED ---
@@ -300,6 +323,11 @@ class AccountWorker(QRunnable):
 
                 # If login successful, perform actions based on context
                 if login_success and self.driver:
+                    self.signals.log.emit(f"✅ LOGIN SUCCESS for UID: {uid}")
+                    self.signals.log.emit(f"🔍 DEBUG: post_url={self.post_url}")
+                    self.signals.log.emit(f"🔍 DEBUG: actions={self.actions}")
+                    self.signals.log.emit(f"🔍 DEBUG: schedule_actions={self.schedule_actions}")
+                    
                     # Save session for future use
                     if reuse_sessions:
                         if session_storage == "cookies":
@@ -308,11 +336,16 @@ class AccountWorker(QRunnable):
                             self.signals.log.emit(f"Session saved for UID: {uid}")
 
                     if self.post_url:
+                        self.signals.log.emit(f"🎯 CALLING perform_post_actions for UID: {uid}")
                         self.perform_post_actions(self.driver, uid)
                     elif self.schedule_actions:
+                        self.signals.log.emit(f"📅 CALLING perform_scheduled_actions for UID: {uid}")
                         self.perform_scheduled_actions(self.driver, uid)
                     elif hasattr(self, 'automation_actions') and self.automation_actions:
+                        self.signals.log.emit(f"🤖 CALLING perform_automation_actions for UID: {uid}")
                         self.perform_automation_actions(self.driver, uid)
+                    else:
+                        self.signals.log.emit(f"⚠️ NO ACTIONS TO PERFORM for UID: {uid}")
 
                 self.signals.finished.emit(self.row_index, status)
 
@@ -532,8 +565,16 @@ class AccountWorker(QRunnable):
     def perform_post_actions(self, driver, uid):
         """Perform actions on the post (like, comment, etc.)"""
         try:
-            self.signals.log.emit(f"Navigating to post for UID: {uid}")
+            self.signals.log.emit(f"🎯 STARTING perform_post_actions for UID: {uid}")
+            self.signals.log.emit(f"🔍 DEBUG: post_url={self.post_url}")
+            self.signals.log.emit(f"🔍 DEBUG: actions={self.actions}")
+            self.signals.log.emit(f"🔍 DEBUG: react_type={self.react_type}")
+            self.signals.log.emit(f"🔍 DEBUG: comment_text={self.comment_text}")
+            self.signals.log.emit(f"🔍 DEBUG: random_comments={'Yes' if self.random_comments else 'No'}")
+            
+            self.signals.log.emit(f"🌐 Navigating to post URL: {self.post_url}")
             driver.get(self.post_url)
+            self.signals.log.emit(f"✅ Navigation complete, waiting for page load...")
             self.human_delay(3, 5)
             # Wait for post to load
             post_selectors = [
@@ -554,20 +595,34 @@ class AccountWorker(QRunnable):
                 except:
                     continue
             if not post_element:
-                self.signals.log.emit(f"Could not find post for UID: {uid}")
+                self.signals.log.emit(f"❌ ERROR: Could not find post element for UID: {uid}")
+                self.signals.log.emit(f"🔍 DEBUG: Current URL: {driver.current_url}")
+                self.signals.log.emit(f"🔍 DEBUG: Page title: {driver.title}")
                 return
 
+            self.signals.log.emit(f"✅ Post element found! Starting actions...")
+            self.signals.log.emit(f"🎯 Actions to perform: {self.actions}")
+            
             # Perform actions based on selection
             if 'react' in self.actions and self.react_type:
+                self.signals.log.emit(f"🔄 Executing REACT action with type: {self.react_type}")
                 self.react_to_post(driver, uid, self.react_type)
             if 'like' in self.actions:
+                self.signals.log.emit(f"🔄 Executing LIKE action")
                 self.like_post(driver, uid)
             if 'comment' in self.actions:
+                self.signals.log.emit(f"🔄 Executing COMMENT action")
                 comment_text = self.get_comment_text()
+                self.signals.log.emit(f"📝 Comment text: {comment_text[:50] if comment_text else 'EMPTY'}")
                 if comment_text:
                     self.comment_on_post(driver, uid, comment_text)
+                else:
+                    self.signals.log.emit(f"⚠️ No comment text available - skipping comment action")
             if 'share' in self.actions:
+                self.signals.log.emit(f"🔄 Executing SHARE action")
                 self.share_post(driver, uid)
+            
+            self.signals.log.emit(f"✅ All actions completed for UID: {uid}")
         except Exception as e:
             self.signals.log.emit(f"Error performing actions for {uid}: {e}")
 
@@ -1104,7 +1159,7 @@ class AccountWorker(QRunnable):
     def react_to_post(self, driver, uid, react_type):
         """React to the post with a specific emotion - ENHANCED VERSION"""
         try:
-            self.signals.log.emit(f"Attempting to react with {react_type} for UID: {uid}")
+            self.signals.log.emit(f"😊 START: react_to_post with {react_type} for UID: {uid}")
             # First, try to find the reaction button container
             reaction_container_selectors = [
                 "//div[@aria-label='Like' or @aria-label='Like this post']",
@@ -1283,6 +1338,7 @@ class AccountWorker(QRunnable):
     def like_post(self, driver, uid):
         """Like the post"""
         try:
+            self.signals.log.emit(f"👍 START: like_post for UID: {uid}")
             # Find like buttons - try different selectors
             like_selectors = [
                 "//div[@aria-label='Like' or @aria-label='Like this post']",
@@ -1340,6 +1396,8 @@ class AccountWorker(QRunnable):
     def comment_on_post(self, driver, uid, comment_text):
         """Comment on the post"""
         try:
+            self.signals.log.emit(f"💬 START: comment_on_post for UID: {uid}")
+            self.signals.log.emit(f"📝 Comment text to post: {comment_text[:50]}")
             # Scroll down a bit to make sure comment box is visible
             driver.execute_script("window.scrollBy(0, 500);")
             self.human_delay(2, 3)
@@ -1673,6 +1731,13 @@ class ParallelLoginManager(QObject):
     task_completed = pyqtSignal(str)  # uid
     def __init__(self, accounts, use_proxies, post_url, comment_text, actions, random_comments, react_type, db_manager, target_group_url, schedule_actions, config_manager):
         super().__init__()
+        print(f"🔧 DEBUG: ParallelLoginManager.__init__ called")
+        print(f"🔧 DEBUG: post_url={post_url}")
+        print(f"🔧 DEBUG: actions={actions}")
+        print(f"🔧 DEBUG: react_type={react_type}")
+        print(f"🔧 DEBUG: comment_text={'Yes' if comment_text else 'No'}")
+        print(f"🔧 DEBUG: random_comments={'Yes' if random_comments else 'No'}")
+        
         self.accounts = accounts
         self.use_proxies = use_proxies
         self.post_url = post_url
@@ -1774,11 +1839,23 @@ class ParallelLoginManager(QObject):
         return None
     def start(self):
         """Start processing all accounts in parallel"""
+        print(f"🚀 DEBUG: ParallelLoginManager.start() called with {len(self.accounts)} accounts")
+        self.log_message.emit(f"🚀 DEBUG: ParallelLoginManager.start() BEGIN")
+        self.log_message.emit(f"   - Total accounts: {len(self.accounts)}")
+        self.log_message.emit(f"   - post_url: {self.post_url}")
+        self.log_message.emit(f"   - actions: {self.actions}")
+        
         self.completed_count = 0
         self.running = True
+        
+        self.log_message.emit(f"🔧 DEBUG: About to enter worker creation loop...")
         # Create and start workers
         for i, account in enumerate(self.accounts):
+            print(f"🔧 DEBUG: Loop iteration {i+1}/{len(self.accounts)}")
+            self.log_message.emit(f"🔧 DEBUG: Processing account {i+1}/{len(self.accounts)}")
+            
             if not self.running:
+                self.log_message.emit(f"⚠️ DEBUG: self.running is False, breaking loop")
                 break
             # Get proxy for this account
             proxy = self.get_proxy(i)
@@ -1786,24 +1863,50 @@ class ParallelLoginManager(QObject):
             window_position = None
             if self.window_positions:
                 window_position = self.window_positions[i % len(self.window_positions)]
-            # Create worker
-            worker = AccountWorker(
-                account, i, self.use_proxies, self.post_url, self.comment_text, 
-                self.actions, self.random_comments, self.react_type, 
-                self.db_manager, self.target_group_url, self.schedule_actions, 
-                self.config_manager, proxy, window_position
-            )
-            # Connect signals
-            worker.signals.finished.connect(self.on_worker_finished)
-            worker.signals.log.connect(self.log_message.emit)
-            worker.signals.interaction.connect(self.interaction_update.emit)
-            worker.signals.account_status.connect(self.account_status_update.emit)
-            worker.signals.task_completed.connect(self.task_completed.emit)
-            worker.signals.progress.connect(self.on_worker_progress)
-            # Start worker
-            self.thread_pool.start(worker)
+            
+            # Debug logging before creating worker
+            self.log_message.emit(f"🔧 DEBUG: Creating AccountWorker {i+1}")
+            self.log_message.emit(f"🔧 DEBUG: Passing to worker:")
+            self.log_message.emit(f"   - post_url: {self.post_url}")
+            self.log_message.emit(f"   - actions: {self.actions}")
+            self.log_message.emit(f"   - react_type: {self.react_type}")
+            self.log_message.emit(f"   - comment_text: {'Yes' if self.comment_text else 'No'}")
+            self.log_message.emit(f"   - random_comments: {'Yes' if self.random_comments else 'No'}")
+            
+            try:
+                # Create worker
+                self.log_message.emit(f"🔧 DEBUG: About to call AccountWorker() constructor...")
+                worker = AccountWorker(
+                    account, i, self.use_proxies, self.post_url, self.comment_text, 
+                    self.actions, self.random_comments, self.react_type, 
+                    self.db_manager, self.target_group_url, self.schedule_actions, 
+                    self.config_manager, proxy, window_position
+                )
+                self.log_message.emit(f"✅ DEBUG: Worker {i+1} created successfully")
+                
+                # Connect signals
+                self.log_message.emit(f"🔧 DEBUG: Connecting signals for worker {i+1}...")
+                worker.signals.finished.connect(self.on_worker_finished)
+                worker.signals.log.connect(self.log_message.emit)
+                worker.signals.interaction.connect(self.interaction_update.emit)
+                worker.signals.account_status.connect(self.account_status_update.emit)
+                worker.signals.task_completed.connect(self.task_completed.emit)
+                worker.signals.progress.connect(self.on_worker_progress)
+                self.log_message.emit(f"✅ DEBUG: Signals connected for worker {i+1}")
+                
+                # Start worker
+                self.log_message.emit(f"🔧 DEBUG: Starting worker {i+1} in thread pool...")
+                self.thread_pool.start(worker)
+                self.log_message.emit(f"✅ DEBUG: Worker {i+1} started in thread pool")
+            except Exception as e:
+                self.log_message.emit(f"❌ ERROR creating/starting worker {i+1}: {e}")
+                import traceback
+                self.log_message.emit(f"❌ Traceback: {traceback.format_exc()}")
+        
+        self.log_message.emit(f"🔧 DEBUG: Worker creation loop completed")
         # Monitor thread pool
         self.monitor_thread_pool()
+        self.log_message.emit(f"🚀 DEBUG: ParallelLoginManager.start() COMPLETE")
     def on_worker_finished(self, row_index, status):
         """Handle worker finished signal"""
         self.worker_finished.emit(row_index, status)
@@ -4588,14 +4691,23 @@ class MainWindow(QMainWindow):
         self.start_login_process(account_tuples, False)
     def start_interaction_selected(self):
         """Start login and interaction with post for selected accounts"""
+        self.log_message("=" * 80)
+        self.log_message("🚀 START INTERACTION SELECTED - Button clicked!")
+        self.log_message("=" * 80)
+        
         selected_accounts = self.get_selected_accounts()
         if not selected_accounts:
             QMessageBox.warning(self, "No Accounts Selected", "Please select at least one account to interact.")
             return
+        
+        self.log_message(f"✅ Selected {len(selected_accounts)} accounts")
+        
         post_url = self.post_url_input.text().strip()
+        self.log_message(f"📋 Post URL: {post_url}")
         if not post_url:
             QMessageBox.warning(self, "Missing URL", "Please enter a post URL.")
             return
+        
         actions = []
         if self.like_checkbox.isChecked():
             actions.append('like')
@@ -4605,23 +4717,69 @@ class MainWindow(QMainWindow):
             actions.append('react')
         if self.share_checkbox.isChecked():  # Added share action
             actions.append('share')
+        
+        self.log_message(f"✅ Actions selected: {actions}")
+        
         if not actions:
             QMessageBox.warning(self, "No Actions", "Please select at least one action.")
             return
+        
         comment_text = self.comment_input.toPlainText().strip()
+        self.log_message(f"📝 Comment text: {comment_text if comment_text else '(empty)'}")
+        
         random_comments = None
         if self.random_comments_checkbox.isChecked():
-            random_comments_text = self.random_comments_input.toPlainText().strip()
-            if random_comments_text:
-                random_comments = [line.strip() for line in random_comments_text.splitlines() if line.strip()]
-                if len(random_comments) < len(selected_accounts):
-                    self.log_message("Warning: Fewer random comments than accounts. Some accounts will reuse comments.")
+            # Use the checkbox-based system if available
+            if hasattr(self, 'random_comments_checkboxes') and self.random_comments_checkboxes:
+                random_comments = self.get_enabled_random_comments()
+                if random_comments:
+                    self.log_message(f"✅ Random comments (checkboxes): {len(random_comments)} comments loaded")
+                    if len(random_comments) < len(selected_accounts):
+                        self.log_message("⚠️ Warning: Fewer random comments than accounts. Some accounts will reuse comments.")
+                else:
+                    self.log_message("⚠️ Random comments checkbox is checked but no comments are enabled")
+            # Fallback to text input if checkbox system not available
+            elif hasattr(self, 'random_comments_input'):
+                random_comments_text = self.random_comments_input.toPlainText().strip()
+                if random_comments_text:
+                    random_comments = [line.strip() for line in random_comments_text.splitlines() if line.strip()]
+                    self.log_message(f"✅ Random comments (text): {len(random_comments)} comments loaded")
+                    if len(random_comments) < len(selected_accounts):
+                        self.log_message("⚠️ Warning: Fewer random comments than accounts. Some accounts will reuse comments.")
+                else:
+                    self.log_message("⚠️ Random comments checkbox is checked but no text provided")
+            else:
+                self.log_message("❌ ERROR: Random comments system not found!")
+        
         selected_reactions = self.get_selected_reactions()
         react_type = selected_reactions[0] if selected_reactions else 'like'
+        self.log_message(f"😊 Reaction type: {react_type}")
+        
         account_tuples = [(acc['uid'], acc['password'], acc['token'], acc['cookie']) for acc in selected_accounts]
+        
+        self.log_message("🎯 CALLING start_login_process with:")
+        self.log_message(f"   - Accounts: {len(account_tuples)}")
+        self.log_message(f"   - Post URL: {post_url}")
+        self.log_message(f"   - Actions: {actions}")
+        self.log_message(f"   - React Type: {react_type}")
+        self.log_message(f"   - Comment Text: {'Yes' if comment_text else 'No'}")
+        self.log_message(f"   - Random Comments: {'Yes' if random_comments else 'No'}")
+        self.log_message("=" * 80)
+        
         self.start_login_process(account_tuples, False, post_url, comment_text, actions, random_comments, react_type)
     def start_login_process(self, accounts, use_proxies=False, post_url=None, comment_text=None, actions=None, random_comments=None, react_type=None, target_group_url=None, schedule_actions=None):
         """Start the login process using parallel execution"""
+        self.log_message("🔧 DEBUG: start_login_process called")
+        self.log_message(f"🔧 DEBUG: Parameters received:")
+        self.log_message(f"   - accounts: {len(accounts)}")
+        self.log_message(f"   - post_url: {post_url}")
+        self.log_message(f"   - actions: {actions}")
+        self.log_message(f"   - comment_text: {'Yes' if comment_text else 'No'}")
+        self.log_message(f"   - random_comments: {'Yes' if random_comments else 'No'}")
+        self.log_message(f"   - react_type: {react_type}")
+        self.log_message(f"   - target_group_url: {target_group_url}")
+        self.log_message(f"   - schedule_actions: {schedule_actions}")
+        
         if self.login_manager and self.login_manager.running:
             self.log_message("A process is already running. Please stop it first.")
             return
