@@ -1,0 +1,5 @@
+{
+    "version": "1.2.0",
+    "download_url": "https://github.com/phattra-dev/FFTOOL/releases/download/v1.2.0/FFTool_Distribution.zip",
+    "release_notes": "- Dynamic Status Registry for centralized status management\n- Fixed false positive checkpoint detection\n- Fixed checkpoint status being overwritten by Failed\n- Automation mode now continues actions after password fallback\n- Improved login status verification\n- New view livestream feature\n- Fixed loading cursor during automation\n- Performance optimizations for batch operations"
+}
